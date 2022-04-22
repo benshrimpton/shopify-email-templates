@@ -7,11 +7,13 @@
   <mj-section padding="{{ padding | default('0 0 20px') }}">
     <mj-column>
       <mj-text
-        font-size="16px"
+        font-size="14px"
         line-height="1.7"
         color="{{ style.color['grey-dark'] }}"
       >
-        Estimated delivery date: <strong>{% verbatim %}{{ fulfillment.estimated_delivery_at | date: '%B %-d, %Y' }}{% endverbatim %}</strong>
+        <div class="text-center">
+          Estimated delivery date: <strong class="poppins-regular" style="color:black">{% verbatim %}{{ fulfillment.estimated_delivery_at | date: '%B %-d, %Y' }}{% endverbatim %}</strong>
+        </div>
       </mj-text>
     </mj-column>
   </mj-section>

@@ -39,20 +39,20 @@
     {% endif %}
   </mj-raw>
 
-  <mj-section padding="20px 0">
+  <mj-section padding="16px 0">
     <mj-column>
       <mj-table>
         <tr>
           {% block left %}
-            {% verbatim %}
+            {% verbatim %}328
               {% if line_item.image %}
             {% endverbatim %}
 
-              <td style="width: 60px; padding-right: 15px;">
+              <td style="width: 125px; padding-right: 15px;">
                 <img
-                  src="{{ development ? server ~ '/assets/product.png' : "{{ line_item | img_url: 'compact_cropped' }}" }}"
-                  width="60px"
-                  height="60px"
+                  src="{{ development ? server ~ '/assets/product.webp' : "{{ line_item | img_url: '250x328' }}" }}"
+                  width="125px"
+                  height="164px"
                   style="border: 1px solid {{ style.color.grey }}; vertical-align: middle;"
                 />
               </td>
