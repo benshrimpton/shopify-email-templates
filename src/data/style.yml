@@ -1,0 +1,13 @@
+style:
+  breakpoint:
+    mobile: 400px
+  max-width: 650px
+  color:
+    black: '#464646' # rgb(70,70,70)
+    white: '#ffffff' # rgb(255,255,255)
+    grey: '#e1e1e1' # rgb(225,225,225)
+    grey-dark: '#767676' # rgb(118,118,118)
+    primary: '#1A90C6' # rgb(26,144,198)
+    red-light: '#ffe6e6' # rgb(255,230,230)
+    red: '#fa4646' # rgb(250,70,70)
+    red-dark: '#d21919' # rgb(210,25,25)

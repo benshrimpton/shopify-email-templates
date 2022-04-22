@@ -1,0 +1,22 @@
+{% block footer_outer %}
+  <mj-wrapper padding-top="30px">
+    <mj-section
+      border-top="1px solid {{ style.color.grey }}"
+      padding="30px 0"
+    >
+      <mj-column>
+        {% block footer %}
+          <mj-text
+            color="{{ style.color['grey-dark'] }}"
+            font-size="14px"
+            line-height="1.7"
+          >
+            {% block text %}
+              {{ text | default('If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a>')}}
+            {% endblock %}
+          </mj-text>
+        {% endblock %}
+      </mj-column>
+    </mj-section>
+  </mj-wrapper>
+{% endblock %}
