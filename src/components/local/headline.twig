@@ -1,7 +1,7 @@
 {% block headline_outer %}
-  <mj-section padding="{{ padding | default('0 0 20px') }}">
+  <mj-section css-class="headline">
     <mj-column>
-      <mj-text font-size="{{ font_size | default('20px') }}">
+      <mj-text>
         {% block headline %}
           {{ headline | default('Headline') }}
         {% endblock %}

@@ -1,10 +1,10 @@
 <mj-section padding="{{ padding | default('0 0 20px') }}">
-  <mj-column>
+  <mj-column css-class="intro-text">
     {% block topline_outer %}
       <mj-text
-        color="{{ style.color['grey-dark'] }}"
         font-size="16px"
         padding-bottom="20px"
+        css-class="poppins-regular-wrap uppercase"
       >
         {% block topline %}
           {{ topline | default('ORDER {{ name }}') }}
@@ -28,7 +28,6 @@
       <mj-text
         font-size="16px"
         line-height="1.7"
-        color="{{ style.color['grey-dark'] }}"
       >
         {% block text %}{{ text | default('Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia optio delectus asperiores architecto cupiditate perferendis aperiam magni veritatis, nulla corrupti?') }}{% endblock %}
       </mj-text>

@@ -81,7 +81,7 @@
                   {% endif %}
                 {% endverbatim %}
 
-                <div style="font-size: 16px; font-weight: 500;">
+                <div class="product-item__title uppercase poppins-regular">
                   {% verbatim %}
                     {{ line_title }} × {{ line_display }}
                   {% endverbatim %}
@@ -100,7 +100,7 @@
                   {% if line_item.variant.title != 'Default Title' %}
                 {% endverbatim %}
 
-                  <div>
+                  <div class="uppercase poppins-light">
                     {% verbatim %}
                       {{ line_item.variant.title }}
                     {% endverbatim %}
@@ -116,7 +116,7 @@
                   {% if line_item.selling_plan_allocation %}
                 {% endverbatim %}
 
-                  <div style="font-size: 14px;">
+                  <div style="font-size: 14px;" class="uppercase poppins-light">
                     {% verbatim %}
                       {{ line_item.selling_plan_allocation.selling_plan.name }}
                     {% endverbatim %}
@@ -154,7 +154,9 @@
                       style="vertical-align: bottom; padding-right: 4px"
                     />
 
-                    <span style="color: {{ style.color['grey-dark'] }}; font-size: 14px;">
+                    <span
+                      style="color: {{ style.color['grey-dark'] }}; font-size: 14px;"
+                      class="poppins-light uppercase">
                       {% verbatim %}
                         {{ discount_allocation.discount_application.title | upcase }}
                         (-{{ discount_allocation.amount | money }})
@@ -179,7 +181,9 @@
                 {% endverbatim %}
 
                     <div style="text-align: right;">
-                      <del style="font-size: 14px; color: {{ style.color['grey-dark'] }}">
+                      <del
+                        style="font-size: 14px; color: {{ style.color['grey-dark'] }}"
+                        class="poppins-regular uppercase">
                         {% verbatim %}
                           {{ line_item.original_line_price | money }}
                         {% endverbatim %}
@@ -196,7 +200,9 @@
                   {% if line_item.final_line_price > 0 %}
                 {% endverbatim %}
 
-                  <div style="font-size: 16px; font-weight: 500; text-align: right;">
+                  <div
+                    style="font-size: 14px; text-align: right;"
+                    class="poppins-regular uppercase">
                     {% verbatim %}
                       {{ line_item.final_line_price | money }}
                     {% endverbatim %}
@@ -206,7 +212,9 @@
                     {% if line_item.unit_price_measurement %}
                   {% endverbatim %}
 
-                    <div style="color: {{ style.color['grey-dark'] }}; font-size: 12px; text-align: right;">
+                    <div
+                      style="color: {{ style.color['grey-dark'] }}; font-size: 12px; text-align: right;"
+                      class="poppins-regular uppercase">
                       {% verbatim %}
                         {{ line_item.unit_price | money }} /
 
@@ -226,7 +234,9 @@
                   {% else %}
                 {% endverbatim %}
 
-                  <div style="font-size: 16px; font-weight: 500; text-align: right;">
+                  <div
+                    style="font-size: 14px; text-align: right;"
+                    class="poppins-regular uppercase">
                     Free
                   </div>
 

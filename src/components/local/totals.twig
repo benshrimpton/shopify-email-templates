@@ -43,7 +43,7 @@
                 </span>
               </td>
 
-              <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
                 <strong>
                   {% verbatim %}
                     -{{ discount_application.total_allocated_amount | money }}
@@ -66,7 +66,7 @@
               Subtotal
             </td>
 
-            <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+            <td style="text-align: right; font-size: 16px; padding: 5px 0;">
               {% verbatim %}
                 {{ subtotal_price | money }}
               {% endverbatim %}
@@ -86,7 +86,7 @@
               {% endif %}
             </td>
 
-            <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+            <td style="text-align: right; font-size: 16px; padding: 5px 0;">
               {% verbatim %}
                 {{ shipping_price | money }}
               {% endverbatim %}
@@ -106,7 +106,7 @@
                 Duties
               </td>
 
-              <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
                 {% verbatim %}
                   {{ current_total_duties | money }}
                 {% endverbatim %}
@@ -126,7 +126,7 @@
               Taxes
             </td>
 
-            <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+            <td style="text-align: right; font-size: 16px; padding: 5px 0;">
               {% verbatim %}
                 {{ tax_price | money }}
               {% endverbatim %}
@@ -146,7 +146,7 @@
                 Tip
               </td>
 
-              <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
                 {% verbatim %}
                   {{ total_tip | money }}
                 {% endverbatim %}
@@ -181,7 +181,7 @@
                 Updated total
               </td>
 
-              <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
                 {% verbatim %}
                   {{ total_price | money }}
                 {% endverbatim %}
@@ -193,7 +193,7 @@
                 Already paid
               </td>
 
-              <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
                 {% verbatim %}
                   {{ net_payment | money }}
                 {% endverbatim %}
@@ -220,7 +220,7 @@
               Amount to pay
             </td>
 
-            <td style="text-align: right; font-size: 24px; font-weight: 700;">
+            <td style="text-align: right; font-size: 24px;">
               {% verbatim %}
                 {{ total_outstanding | money_with_currency }}
               {% endverbatim %}
@@ -245,7 +245,7 @@
               Total
             </td>
 
-            <td style="text-align: right; font-size: 24px; font-weight: 700;">
+            <td style="text-align: right; font-size: 24px;">
               {% verbatim %}
                 {{ total_price | money_with_currency }}
               {% endverbatim %}
@@ -335,7 +335,7 @@
                       {% endverbatim %}
                     </td>
 
-                    <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+                    <td style="text-align: right; font-size: 16px; padding: 5px 0;">
                       {% verbatim %}
                         {{ transaction.amount | money }}
                       {% endverbatim %}
@@ -375,7 +375,7 @@
                       </span>
                     </td>
 
-                    <td style="text-align: right; font-size: 16px; font-weight: 700; padding: 5px 0;">
+                    <td style="text-align: right; font-size: 16px; padding: 5px 0;">
                       {% verbatim %}
                         - {{ transaction.amount | money }}
                       {% endverbatim %}
