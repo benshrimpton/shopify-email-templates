@@ -1,13 +1,15 @@
-<mj-section padding="{{ padding | default('0 0 20px') }}">
+<mj-section>
   <mj-column css-class="intro-text">
     {% block topline_outer %}
       <mj-text
         font-size="16px"
         padding-bottom="20px"
-        css-class="poppins-regular-wrap uppercase"
+        css-class=""
       >
         {% block topline %}
-          {{ topline | default('ORDER {{ name }}') }}
+          <span class="poppins-light">
+            {{ topline | default('ORDER {{ name }}') }}
+          </span>
         {% endblock %}
       </mj-text>
     {% endblock %}
@@ -17,9 +19,12 @@
         font-size="24px"
         line-height="1.4"
         padding-bottom="20px"
+        css-class="intro-text__title uppercase"
       >
         {% block headline %}
-          {{ headline | default('Headline') }}
+         <span class="intro-text__message">
+         {{ headline | default('Headline') }}
+         </span>
         {% endblock %}
       </mj-text>
     {% endblock %}

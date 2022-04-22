@@ -73,12 +73,12 @@ body {
 .container {
   padding: 20px 10px 0;
   margin: 0 auto;
-  max-width: 650px;
+  max-width: 600px;
   background: white;
 }
 .container * {
-  font-family: 'LibreCaslonText', 'Adobe Caslon Pro', "Hoefler Text", Georgia, Garamond, Times, serif !important;
-  font-weight: normal;
+  font-family: 'Poppins-Light', Arial, Helvetica, sans-serif !important;
+  font-weight: normal !important;
 }
 .container * em {
   font-family: 'LibreCaslonText-Italic', 'Adobe Caslon Pro', "Hoefler Text", Georgia, Garamond, Times, serif !important;
@@ -93,8 +93,11 @@ body {
 
 {# link #}
 a, a:hover, a:active, a:visited {
-  color: {{ style.color.primary }};
-  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+}
+a > img {
+  border: none;
 }
 
 {# make link inside button full width #}
@@ -106,26 +109,15 @@ a, a:hover, a:active, a:visited {
 p {
   margin: 0;
 }
-.poppins-light-wrap *,
-.poppins-light {
-  font-family: 'Poppins-Light', Arial, Helvetica, sans-serif !important;
-}
 
-.poppins-regular-wrap *,
-.poppins-regular {
-  font-family: 'Poppins-Medium', Arial, Helvetica, sans-serif !important;
-}
-.uppercase,
-.uppercase * {
-  text-transform: uppercase !important;
-}
 .header {
   text-align: center;
 }
 .logo {
   margin: 0 auto !important;
   width: 180px !important;
-  display: block 
+  display: block;
+  padding-top: 20px;
 }
 .logo img {
   width: 100%;
@@ -137,22 +129,34 @@ p {
 }
 .intro-text {
   text-align: center;
+  padding-bottom: 20px;
 }
 .intro-text table,
 .intro-text * {
   text-align: center !important;
-  font-family: 'LibreCaslonText', 'Adobe Caslon Pro', "Hoefler Text", Georgia, Garamond, Times, serif !important;
+  font-family: 'Poppins-Light', Arial, Helvetica, sans-serif !important;
+  font-size: 14px !important;
   font-weight: normal !important;
+  letter-spacing: .01em;
+  text-transform: uppercase;
 }
 .intro-text table div {
   /* border: solid 1px; */
   margin: 0 auto;
   max-width: 420px;
 }
+.intro-text__message {
+  font-family: 'LibreCaslonText', 'Adobe Caslon Pro', "Hoefler Text", Georgia, Garamond, Times, serif !important;
+  letter-spacing: 1px !important;
+  font-size: 22px !important;
+}
 .headline * {
   font-family: 'Poppins-Medium', Arial, Helvetica, sans-serif !important;
   text-transform: uppercase;
   letter-spacing: .01em !important;
+}
+.button-wrap {
+padding-bottom: 40px;
 }
 .button a {
   align-items: center !important;
@@ -168,4 +172,36 @@ p {
   padding: 16px 32px !important;
   color: white !important;
   border-radius: 0 !important;
+}
+.button a:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+/*globals below*/
+.poppins-light-wrap *,
+.poppins-light {
+  font-family: 'Poppins-Light', Arial, Helvetica, sans-serif !important;
+}
+
+.poppins-regular-wrap *,
+.poppins-regular {
+  font-family: 'Poppins-Medium', Arial, Helvetica, sans-serif !important;
+}
+.uppercase,
+.uppercase * {
+  text-transform: uppercase !important;
+}
+
+.totals {
+  text-transform: uppercase !important;
+}
+
+/* Footer */
+.footer-message * {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  letter-spacing: .01em;
 }

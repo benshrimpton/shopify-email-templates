@@ -14,20 +14,21 @@
     <mj-section padding="{{ padding | default('0 0 30px') }}">
       <mj-column>
           <mj-text
-            font-size="16px"
-            font-weight="500"
-            color="{{ style.color['grey-dark'] }}"
-            padding-bottom="5px"
+            font-size="12px" 
+            padding-top="20px"                                
+            css-class="uppercase"
           >
             {% block shipping_address_headline %}
+              <span class="poppins-regular">
               {{ shipping_address_headline | default('Shipping address') }}
+              </span>
             {% endblock %}
           </mj-text>
 
           <mj-text
-            font-size="16px"
-            line-height="1.7"
-            color="{{ style.color['grey-dark'] }}"
+            font-size="12px"
+            line-height="1.7" 
+            css-class="uppercase"          
           >
             {% block shipping_address %}
               {% verbatim %}
@@ -55,20 +56,20 @@
     <mj-section padding-bottom="30px">
       <mj-column>
           <mj-text
-            font-size="16px"
-            font-weight="500"
-            color="{{ style.color['grey-dark'] }}"
-            padding-bottom="5px"
+            font-size="12px" 
+            css-class="uppercase"                                  
           >
             {% block billing_address_headline %}
+             <span class="poppins-regular">
               {{ billing_address_headline | default('Billing address') }}
+              </span>
             {% endblock %}
           </mj-text>
 
           <mj-text
-            font-size="16px"
-            line-height="1.7"
-            color="{{ style.color['grey-dark'] }}"
+            font-size="12px"
+            line-height="1.7" 
+            css-class="uppercase"          
           >
             {% block billing_address %}
               {% verbatim %}
@@ -96,20 +97,20 @@
     <mj-section padding-bottom="30px">
       <mj-column>
           <mj-text
-            font-size="16px"
-            font-weight="500"
-            color="{{ style.color['grey-dark'] }}"
-            padding-bottom="5px"
+            font-size="12px"  
+            css-class="uppercase"                                 
           >
             {% block shipping_method_headline %}
+              <span class="poppins-regular">
               {{ shipping_method_headline | default('Shipping method') }}
+              </span>
             {% endblock %}
           </mj-text>
 
           <mj-text
-            font-size="16px"
+            font-size="12px"
             line-height="1.7"
-            color="{{ style.color['grey-dark'] }}"
+            css-class="uppercase"           
           >
             {% block shipping_method %}
               {% verbatim %}
@@ -138,13 +139,13 @@
     <mj-section padding-bottom="30px">
       <mj-column>
         <mj-text
-          font-size="16px"
-          font-weight="500"
-          color="{{ style.color['grey-dark'] }}"
-          padding-bottom="5px"
+          font-size="12px"
+          css-class="uppercase"                             
         >
           {% block payment_method_headline %}
+            <span class="poppins-regular">
             {{ payment_method_headline | default('Payment method') }}
+            </span>
           {% endblock %}
         </mj-text>
 
@@ -157,10 +158,9 @@
         {% endverbatim %}
 
           <mj-text
-            font-size="16px"
+            font-size="12px"
             line-height="1.7"
-            color="{{ style.color['grey-dark'] }}"
-            padding-bottom="5px"
+            css-class="uppercase"                       
           >
             {% block payment_method %}
               {% verbatim %}
@@ -183,7 +183,7 @@
                     style="vertical-align: text-top; padding-right: 5px;"
                   >
 
-                  ending with {{ transaction.payment_details.gift_card.last_four_characters | upcase }} — <strong>{{ transaction.amount | money }}</strong> <span style="font-size: 14px;">(Gift card balance: {{ transaction.payment_details.gift_card.balance | money }})</span>
+                  ending with {{ transaction.payment_details.gift_card.last_four_characters | upcase }} — <strong>{{ transaction.amount | money }}</strong> <span style="font-size: 12px;">(Gift card balance: {{ transaction.payment_details.gift_card.balance | money }})</span>
                 {% else %}
                   {{ transaction.gateway_display_name }} — <strong>{{ transaction.amount | money }}</strong>
                 {% endif %}

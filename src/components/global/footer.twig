@@ -7,9 +7,9 @@
       <mj-column>
         {% block footer %}
           <mj-text
-            color="{{ style.color['grey-dark'] }}"
-            font-size="14px"
+            font-size="11px"
             line-height="1.7"
+            css-class="footer-message"
           >
             {% block text %}
               {{ text | default('If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a>')}}

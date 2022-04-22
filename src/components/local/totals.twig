@@ -1,7 +1,8 @@
-<mj-section padding-bottom="20px">
+<mj-section padding-bottom="20px"
+css-class="totals">
   <mj-column
     border-top="1px solid {{ style.color.grey }}"
-    padding-top="20px"
+    padding-top="20px"    
   >
     <mj-table>
       {# discounts - start #}
@@ -23,7 +24,7 @@
 
             <tr>
               <td style="padding: 5px 0;">
-                <span style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding-right: 5px;">
+                <span style=" color: {{ style.color['grey-dark'] }}; padding-right: 5px;">
                   Discount
                 </span>
 
@@ -43,7 +44,7 @@
                 </span>
               </td>
 
-              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+              <td style="text-align: right;  padding: 5px 0;">
                 <strong>
                   {% verbatim %}
                     -{{ discount_application.total_allocated_amount | money }}
@@ -62,11 +63,11 @@
       {# subtotal - start #}
         {% block subtotal %}
           <tr>
-            <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+            <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
               Subtotal
             </td>
 
-            <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+            <td style="text-align: right;  padding: 5px 0;">
               {% verbatim %}
                 {{ subtotal_price | money }}
               {% endverbatim %}
@@ -78,7 +79,7 @@
       {# pickup/shipping - start #}
         {% block shipping %}
           <tr>
-            <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+            <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
               {% if delivery_method == 'pick-up' %}
                 Pickup
               {% else %}
@@ -86,7 +87,7 @@
               {% endif %}
             </td>
 
-            <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+            <td style="text-align: right;  padding: 5px 0;">
               {% verbatim %}
                 {{ shipping_price | money }}
               {% endverbatim %}
@@ -102,11 +103,11 @@
           {% endverbatim %}
 
             <tr>
-              <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+              <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
                 Duties
               </td>
 
-              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+              <td style="text-align: right;  padding: 5px 0;">
                 {% verbatim %}
                   {{ current_total_duties | money }}
                 {% endverbatim %}
@@ -122,11 +123,11 @@
       {# taxes - start #}
         {% block taxes %}
           <tr>
-            <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+            <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
               Taxes
             </td>
 
-            <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+            <td style="text-align: right;  padding: 5px 0;">
               {% verbatim %}
                 {{ tax_price | money }}
               {% endverbatim %}
@@ -142,11 +143,11 @@
           {% endverbatim %}
 
             <tr>
-              <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+              <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
                 Tip
               </td>
 
-              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+              <td style="text-align: right;  padding: 5px 0;">
                 {% verbatim %}
                   {{ total_tip | money }}
                 {% endverbatim %}
@@ -177,11 +178,11 @@
         >
           <mj-table>
             <tr>
-              <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+              <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
                 Updated total
               </td>
 
-              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+              <td style="text-align: right;  padding: 5px 0;">
                 {% verbatim %}
                   {{ total_price | money }}
                 {% endverbatim %}
@@ -189,11 +190,11 @@
             </tr>
 
             <tr>
-              <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+              <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
                 Already paid
               </td>
 
-              <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+              <td style="text-align: right;  padding: 5px 0;">
                 {% verbatim %}
                   {{ net_payment | money }}
                 {% endverbatim %}
@@ -209,14 +210,14 @@
       </mj-raw>
     {% endverbatim %}
 
-    <mj-section padding-bottom="20px">
+    <mj-section padding-bottom="20px" css-class="totals">
       <mj-column
         border-top="2px solid {{ style.color.grey }}"
         padding-top="20px"
       >
         <mj-table>
           <tr>
-            <td style="font-size: 16px; color: {{ style.color['grey-dark'] }};">
+            <td style=" color: {{ style.color['grey-dark'] }};">
               Amount to pay
             </td>
 
@@ -234,14 +235,14 @@
 
 {# total - start #}
   {% block total %}
-    <mj-section>
+    <mj-section css-class="totals">
       <mj-column
         border-top="2px solid {{ style.color.grey }}"
         padding-top="20px"
       >
         <mj-table>
           <tr>
-            <td style="font-size: 16px; color: {{ style.color['grey-dark'] }};">
+            <td style=" color: {{ style.color['grey-dark'] }};">
               Total
             </td>
 
@@ -329,13 +330,13 @@
                   {% endverbatim %}
 
                   <tr>
-                    <td style="font-size: 16px; color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
+                    <td style=" color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
                       {% verbatim %}
                         {{ transaction_name }}
                       {% endverbatim %}
                     </td>
 
-                    <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+                    <td style="text-align: right;  padding: 5px 0;">
                       {% verbatim %}
                         {{ transaction.amount | money }}
                       {% endverbatim %}
@@ -362,7 +363,7 @@
 
                   <tr>
                     <td style="color: {{ style.color['grey-dark'] }}; padding: 5px 0;">
-                      <span style="font-size: 16px;">
+                      <span style="">
                         Refund
                       </span>
 
@@ -375,7 +376,7 @@
                       </span>
                     </td>
 
-                    <td style="text-align: right; font-size: 16px; padding: 5px 0;">
+                    <td style="text-align: right;  padding: 5px 0;">
                       {% verbatim %}
                         - {{ transaction.amount | money }}
                       {% endverbatim %}

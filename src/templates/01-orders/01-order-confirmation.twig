@@ -27,7 +27,7 @@
             {% when 'local' %}
               Hi {{ customer.first_name }}, we're getting your order ready for delivery.
             {% else %}
-              Hi {{ customer.first_name }}, we're getting your order ready to be shipped. We will notify you when it has been sent.
+              Hi {{ customer.first_name }}, we're getting your order ready to be shipped.<br> We will notify you when it has been sent.
           {% endcase %}
         {% endif %}
     {% endcapture %}

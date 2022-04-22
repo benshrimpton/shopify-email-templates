@@ -10,19 +10,5 @@
         {% endblock %}
       </mj-button>
     {% endblock %}
-
-    {% block secondary_outer %}
-      <mj-text
-        align="center"
-        font-size="14px"
-        padding="5px 0"
-      >
-        {% block secondary %}
-          or <a href="{% block secondary_url %}{{ secondary.url | default('{{ shop.url }}') }}{% endblock %}">
-            {% block secondary_text %}{{ secondary.text | default('Visit our store') }}{% endblock %}
-          </a>
-        {% endblock %}
-      </mj-text>
-    {% endblock %}
   </mj-column>
 </mj-section>
