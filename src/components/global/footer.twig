@@ -1,9 +1,6 @@
 {% block footer_outer %}
-  <mj-wrapper padding-top="30px">
-    <mj-section
-      border-top="1px solid {{ style.color.grey }}"
-      padding="30px 0"
-    >
+  <mj-wrapper css-class="footer">
+    <mj-section>
       <mj-column>
         {% block footer %}
           <mj-text
@@ -11,8 +8,19 @@
             line-height="1.7"
             css-class="footer-message"
           >
+          
             {% block text %}
-              {{ text | default('If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a>')}}
+              <div class="footer-message__icon">
+                <a
+                  href="https://www.instagram.com/laveree_official/?hl=en"
+                  target="_blank"
+                  >
+                  <img src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/buttons/black/instagram_96.png" alt="Instagram" width="24" height="24">
+                </a>
+              </div> 
+              <div class="footer-message__message">
+               <p>{{ text | default('If you have any questions, reply to this email or contact us at <a href="mailto:{{ shop.email }}">{{ shop.email }}</a>')}}</p>
+              </div>           
             {% endblock %}
           </mj-text>
         {% endblock %}
